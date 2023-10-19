@@ -1,1 +1,3 @@
 Usuario registrado: [nickname = Cykes, password = Elefante]    Fecha: [Wed Oct 18 22:31:12 COT 2023]
+Usuario registrado: [nickname = emrubio, password = 123]    Fecha: [Wed Oct 18 22:46:48 ECT 2023]
+Usuario registrado: [nickname = alexsor, password = 123]    Fecha: [Wed Oct 18 22:51:56 ECT 2023]
