@@ -1,0 +1,2 @@
+Sesión iniciada por usuario: [nickname = Cykes, password = Elefante]    Fecha: [Wed Oct 18 22:31:20 COT 2023]
+Sesión cerrada por usuario: [nickname = Cykes, password = Elefante]    Fecha: [Wed Oct 18 22:31:25 COT 2023]
