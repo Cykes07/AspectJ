@@ -10,14 +10,14 @@ import com.bettinghouse.User;
 
 public aspect Log {
 
-    File file = new File("Register.txt");
-    File file2 = new File("Log.txt");  
+    File f = new File("Register.txt");
+    File f2 = new File("Log.txt");  
     
     pointcut registrarUsuario(User user, Person person): call(* successfulSignUp(User, Person)) && args(user, person);
     
     after(User user, Person person) : registrarUsuario(user, person) {
     	Calendar cal = Calendar.getInstance();
-    	try(PrintWriter pw = new PrintWriter(new FileOutputStream(file,true))){
+    	try(PrintWriter pw = new PrintWriter(new FileOutputStream(f,true))){
     		pw.println("Usuario registrado: [" + user + "]    Fecha: [" + cal.getTime() + "]");
     	} catch(FileNotFoundException e){
     		System.out.println(e.getMessage());
@@ -29,7 +29,7 @@ public aspect Log {
     after(User user) : success(user) {
     	if (thisJoinPointStaticPart.getSignature().getName().equals("effectiveLogIn")) {
     		Calendar cal = Calendar.getInstance();
-    		try(PrintWriter pw = new PrintWriter(new FileOutputStream(file2,true))){
+    		try(PrintWriter pw = new PrintWriter(new FileOutputStream(f2,true))){
         		pw.println("Sesión iniciada por usuario: [" + user + "]    Fecha: [" + cal.getTime() + "]");
         	} catch(FileNotFoundException e){
         		System.out.println(e.getMessage());
