@@ -34,7 +34,7 @@ public aspect Log {
         	} catch(FileNotFoundException e){
         		System.out.println(e.getMessage());
         	}    
-    		System.out.println("** User logged in **");
+    		System.out.println("** in **");
     	} else {
     		Calendar cal = Calendar.getInstance();
     		try(PrintWriter pw = new PrintWriter(new FileOutputStream(file2,true))){
@@ -42,7 +42,7 @@ public aspect Log {
         	} catch(FileNotFoundException e){
         		System.out.println(e.getMessage());
         	}    
-    		System.out.println("** User logged out **");
+    		System.out.println("** out **");
     	}
     }
 }
